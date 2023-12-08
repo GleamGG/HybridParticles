@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 import org.bukkit.entity.Player;
+import org.bukkit.scheduler.BukkitRunnable;
 import xyz.hybridmc.hybridparticles.HybridParticles;
 
 public class Effects {
@@ -34,10 +35,23 @@ public class Effects {
                 first = loc.clone().add(Math.cos(var), Math.sin(var) + 1, Math.sin(var));
                 second = loc.clone().add(Math.cos(var + Math.PI), Math.sin(var) + 1, Math.sin(var + Math.PI));
 
-                player.getWorld().spawnParticle(Particle.WATER_BUBBLE, first, 0);
-                player.getWorld().spawnParticle(Particle.WATER_BUBBLE, second, 0);
+                player.getWorld().spawnParticle(Particle.DRIP_WATER, first, 0);
+                player.getWorld().spawnParticle(Particle.DRIP_WATER, second, 0);
             }
 
         }, 0, 1);
+
+
+    }
+
+    public void startWaterOnFoot(Player player) {
+        new BukkitRunnable() {
+            public void run() {
+                Location loc = player.getLocation();
+
+                player.getWorld().spawnParticle(Particle.DRIP_LAVA, loc, 1, 0.0, 0.0, 0.0, 0.0);
+
+            }
+        }.runTaskTimer(HybridParticles.getPlugin(HybridParticles.class), 0, 15L);
     }
 }

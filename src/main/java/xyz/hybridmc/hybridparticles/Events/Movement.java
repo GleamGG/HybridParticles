@@ -14,10 +14,10 @@ public class Movement implements Listener {
 
         Random r = new Random();
         for (int i = 0; i < 5 ; i++)
-            event.getPlayer().getWorld().spawnParticle(Particle.CRIT_MAGIC, event.getPlayer().getLocation().add(
+            event.getPlayer().getWorld().spawnParticle(Particle.DRIP_LAVA, event.getPlayer().getLocation().add(
                     r.nextDouble() * 0.5, r.nextDouble() * 0.5, r.nextDouble() * .5), 0);
         for (int i = 0; i < 5 ; i++)
-            event.getPlayer().getWorld().spawnParticle(Particle.CRIT_MAGIC, event.getPlayer().getLocation().add(
+            event.getPlayer().getWorld().spawnParticle(Particle.DRIP_LAVA, event.getPlayer().getLocation().add(
                     -1*(r.nextDouble() * 0.5), r.nextDouble() * 0.5, (r.nextDouble() * .5) *-1), 0);
     }
 

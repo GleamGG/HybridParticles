@@ -17,19 +17,19 @@ public class GUI {
 
         ItemStack item = new ItemStack(Material.WATER_BUCKET);
         ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName("§b§lWater Spiral");
+        meta.setDisplayName("§e§lWater Spiral");
         item.setItemMeta(meta);
         inv.setItem(21, item);
 
-        item = new ItemStack(Material.CAMPFIRE);
+        item = new ItemStack(Material.LAVA_BUCKET);
         meta = item.getItemMeta();
         meta.setDisplayName("§c§lFire Trail");
         item.setItemMeta(meta);
         inv.setItem(22, item);
 
-        item = new ItemStack(Material.LAVA_BUCKET);
+        item = new ItemStack(Material.BARRIER);
         meta = item.getItemMeta();
-        meta.setDisplayName("§4§lLava Trail");
+        meta.setDisplayName("§4§lCOMING SOON");
         item.setItemMeta(meta);
         inv.setItem(23, item);
 
