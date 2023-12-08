@@ -20,6 +20,6 @@ public final class HybridParticles extends JavaPlugin {
         pm.registerEvents(new Quit(), this);
         pm.registerEvents(new Movement(), this);
 
-        this.getCommand("trail").setExecutor(new Trails());
+        this.getCommand("trails").setExecutor(new Trails());
     }
 }
