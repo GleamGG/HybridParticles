@@ -37,12 +37,12 @@ public class ClickEvent implements Listener {
 
         Effects trails = new Effects(player);
         switch(event.getSlot()) {
-            case 3:
+            case 21:
                 trails.startWater();
                 player.closeInventory();
                 player.updateInventory();
                 break;
-            case 5:
+            case 22:
                 particle.setID(1);
                 player.closeInventory();
                 player.updateInventory();
